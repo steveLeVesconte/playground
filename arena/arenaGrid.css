@@ -1,0 +1,152 @@
+.nav {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(130, 238, 236);
+}
+
+.arena-grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 80fr 30fr;
+  grid-template-areas:
+    "goboard players"
+    "goboard actions"
+    "goboard chat";
+  grid-template-rows: 130px 200px 1fr;
+  max-width: 130vh;
+}
+
+.goboard {
+    grid-area: goboard;
+    background-color: bisque;
+    /*     width:300px; */
+    /* grid-row: span 3; */
+  }
+  .players {
+    /*   width: 300px; */
+    grid-area: players;
+    background-color: violet;
+    height: 130px;
+  }
+  
+  .actions {
+    grid-area: actions;
+    background-color: aqua;
+  
+  }
+  .chat {
+    grid-area: chat;
+    background-color: thistle;
+    min-height: 400px;
+  }
+  .goboard {
+    width: 100%;
+    background-color: bisque;
+    aspect-ratio: 5/5;
+    border: 2px black solid;
+    /* flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink:1; */
+    width: 72vw;
+    height: 72vw;
+  }
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .arena-grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "players"
+      "goboard"
+      "actions"
+      "chat";
+    grid-template-rows: 100px 95vw 1fr;
+    max-width: 95vw;
+  }
+  .goboard {
+    width: 95vw;
+    height: 95vw;
+    background-color: bisque;
+    aspect-ratio: 1/1;
+    border: 2px black solid;
+    /*  grid-row: auto; */
+    /* flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink:1; */
+    /* max-width: 95vh;
+    max-height: 95vh; */
+  }
+  .actions{
+    height:150px;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .game-arena-grid {
+    width: 100%;
+    grid-template-columns: 1fr 50vh;
+    grid-template-areas:
+      "LO BB"
+      "YO BB"
+      "OP BB"
+      "AC BB"
+      "CH BB"
+      "HE BB";
+    grid-template-rows: 1fr 3fr 3fr 2fr 2fr 0px;
+  }
+  .grid-item-he {
+    display: none;
+  }
+}
+
+
+
+.arena-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+}
+
+.control-column {
+  flex-basis: 25%;
+  width: 400px;
+  min-width: 340px;
+  min-width: 340px;
+  background-color: aquamarine;
+}
+/* 
+@media screen and (max-width: 900px) {
+    .arena-flex-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: stretch;
+        width: 100%;
+        height: 100%;
+    }
+    .go-board{
+        width: 75%;
+    background-color: bisque;
+    aspect-ratio: 5/5;
+    flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink:1;
+    max-width: 95vh;
+    max-height: 95vh;
+    }
+    .control-column {
+        flex-basis: 25%;
+        width:400px;
+        min-width:340px;
+        min-width: 340px;
+        background-color: aquamarine;
+    }
+    
+} */

@@ -1,0 +1,117 @@
+.nav{
+  width: 100%;
+  height: 50px;
+}
+
+.flexbox-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+}
+.flexbox-item{
+/* width:200px; */
+/* margin:10px; */
+border: 3px solid #333;
+background-color: #aabbdf;
+
+}
+.flexbox-item-1{
+    min-height: 100px;
+    width:30px;
+}
+.flexbox-item-2{
+   
+}
+.flexbox-item-3{
+    min-height: 300px;
+}
+
+
+.rowNumberContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:stretch;
+    align-items: stretch;
+    width:30px;
+}
+
+.rowItem{
+    border: 3px solid #000;
+background-color: #888;
+flex-grow: 1;
+display: flex;
+
+align-items: center;
+
+}
+p {
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .center {
+    border: 5px solid;
+    display: flex;
+    height: 150px;
+    align-items: center;
+  }
+.num{
+   margin-top: auto;
+   margin-bottom: auto;
+}
+@media screen and (max-width: 1035px){
+    .flexboxContainer{
+      width:calc(97vw+30px);
+      height:calc(97vw);
+      /* background-color: #EAC77B; */
+    }
+    }
+    @media screen and (min-width: 1036px){
+      .flexboxContainer{
+        width:calc(97vh+30px);
+        height:calc(97vh);
+        /* background-color: #EAC77B; */
+      }
+      }
+
+
+@media screen and (max-width: 1035px){
+    .boardContainer{
+      width:calc(97vw);
+      height:calc(97vw);
+      /* background-color: #EAC77B; */
+    }
+    }
+    @media screen and (min-width: 1036px){
+      .boardContainer{
+        width:calc(97vh);
+        height:calc(97vh);
+        /* background-color: #EAC77B; */
+      }
+      }
+
+      @media screen and (max-width: 500px){
+        .rowItem{
+            font-size: 09px;
+        }
+  
+        
+        }
+
+        @media screen and (max-width: 320px){
+            .rowItem{
+                font-size: 02px;
+            }
+      
+            
+            }
+/*         @media screen and (min-width: 1036px){
+          .boardContainer{
+            width:calc(97vh);
+            height:calc(97vh);
+
+          }
+          } */

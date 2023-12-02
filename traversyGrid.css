@@ -1,0 +1,12 @@
+.grid-container>div{
+background: #eee;
+padding: 1em;
+}
+.grid-container>div:nth-child(odd){
+background: #ddd;
+}
+.grid-container{
+    display:grid;
+    grid-template-columns: 20% 100vw 20%;
+    grid-template-rows: 100vh 30% 30%;
+}

@@ -1,0 +1,54 @@
+.arena-flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+}
+.go-board{
+    width: 75%;
+background-color: bisque;
+aspect-ratio: 5/5;
+flex-basis: 50%;
+flex-grow: 1;
+flex-shrink:1;
+max-width: 95vh;
+max-height: 95vh;
+}
+.control-column {
+    flex-basis: 25%;
+    width:400px;
+    min-width:340px;
+    min-width: 340px;
+    background-color: aquamarine;
+}
+
+@media screen and (max-width: 900px) {
+    .arena-flex-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: stretch;
+        width: 100%;
+        height: 100%;
+    }
+    .go-board{
+        width: 75%;
+    background-color: bisque;
+    aspect-ratio: 5/5;
+    flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink:1;
+    max-width: 95vh;
+    max-height: 95vh;
+    }
+    .control-column {
+        flex-basis: 25%;
+        width:400px;
+        min-width:340px;
+        min-width: 340px;
+        background-color: aquamarine;
+    }
+    
+}
