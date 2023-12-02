@@ -1,19 +1,28 @@
+.game-container{
+  max-width: 130vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: yellow;
+}
 .nav {
   width: 100%;
   height: 50px;
   background-color: rgb(130, 238, 236);
+ 
 }
 
 .arena-grid-container {
   display: grid;
   width: 100%;
-  grid-template-columns: 80fr 30fr;
+  grid-template-columns: 80fr 31fr;
   grid-template-areas:
     "goboard players"
     "goboard actions"
     "goboard chat";
-  grid-template-rows: 130px 200px 1fr;
+  grid-template-rows: 130px 90px 1fr;
   max-width: 130vh;
+  background-color: green;
+/*   border: 2px black solid; */
 }
 
 .goboard {
@@ -24,31 +33,46 @@
   }
   .players {
     /*   width: 300px; */
+    display: flex;
+    flex-direction: row;
     grid-area: players;
     background-color: violet;
-    height: 130px;
+    height: 100%;
+    width: 100%;
+  }
+  .player{
+    width:50%;
+    background-color: yellow;
   }
   
+  .opponent{
+    width:50%;
+    background-color: green;
+  }
   .actions {
     grid-area: actions;
     background-color: aqua;
+    width: 100%;
   
   }
   .chat {
     grid-area: chat;
     background-color: thistle;
-    min-height: 400px;
+    min-height: 251px;
+    width: 100%;
   }
   .goboard {
     width: 100%;
     background-color: bisque;
     aspect-ratio: 5/5;
-    border: 2px black solid;
+/*     border: 2px black solid; */
     /* flex-basis: 50%;
     flex-grow: 1;
     flex-shrink:1; */
-    width: 72vw;
-    height: 72vw;
+    max-height: 1230px;
+    max-width: 1230px;
+    width: 72vw 1230px;
+    height: 72vw 1230px;
   }
 
 
@@ -56,6 +80,13 @@
 
 
 @media screen and (max-width: 1000px) {
+
+  .game-container {
+
+
+    max-width: 95vw;
+  }
+
   .arena-grid-container {
     display: grid;
     width: 100%;
@@ -65,7 +96,7 @@
       "goboard"
       "actions"
       "chat";
-    grid-template-rows: 100px 95vw 1fr;
+    grid-template-rows: 90px 95vw 90px 251px;
     max-width: 95vw;
   }
   .goboard {
@@ -73,7 +104,7 @@
     height: 95vw;
     background-color: bisque;
     aspect-ratio: 1/1;
-    border: 2px black solid;
+    /* border: 2px black solid; */
     /*  grid-row: auto; */
     /* flex-basis: 50%;
     flex-grow: 1;
