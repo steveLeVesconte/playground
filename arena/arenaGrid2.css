@@ -1,5 +1,6 @@
 .game-container{
-  max-width: 130vh;
+  max-width: 130vmin;
+  width: 130vmin;
   margin-left: auto;
   margin-right: auto;
   background-color: yellow;
@@ -14,13 +15,14 @@
 .arena-grid-container {
   display: grid;
   width: 100%;
-  grid-template-columns: 80fr 31fr;
+  grid-template-columns: 90vmin 40vmin;
   grid-template-areas:
     "goboard players"
     "goboard actions"
     "goboard chat";
   grid-template-rows: 130px 90px 1fr;
-  max-width: 130vh;
+  max-width: 130vmin;
+  width: 130vmin;
   background-color: green;
 /*   border: 2px black solid; */
 }
@@ -42,7 +44,7 @@
   }
   .player{
     width:50%;
-    background-color: yellow;
+    background-color: rgb(195, 0, 255);
   }
   
   .opponent{
@@ -69,17 +71,20 @@
     /* flex-basis: 50%;
     flex-grow: 1;
     flex-shrink:1; */
-    max-height: 74vw;
-    max-width: 74vw;
-    width: 90vh ;
-    height: 90vh ;
+ /*    max-height: 93vmin;
+    max-width: 93vmin;
+    width: 93vmax ;
+    height: 93vmax ;
+    aspect-ratio: 1 / 1; */
+  width: 100%;
+  max-height: 100%;
   }
 
 
 
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1540px),(max-height: 850px) {
 
   .game-container {
 
@@ -88,23 +93,25 @@
   }
 
   .arena-grid-container {
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
-    width: 100%;
+    width: 80vmin;
     grid-template-columns: 1fr;
     grid-template-areas:
       "players"
       "goboard"
       "actions"
       "chat";
-    grid-template-rows: 90px 95vw 90px 251px;
+    grid-template-rows: 90px 80vmin 90px 251px;
    /*  max-width: 95vw; */
   }
   .goboard {
 
-    max-height: 98vw;
+    /* max-height: 98vw;
     max-width:98vw;
     width: 90vh ;
-    height: 90vh ;
+    height: 90vh ; */
 
 
 
@@ -112,6 +119,8 @@
     height: 95vw; */
     background-color: bisque;
     aspect-ratio: 1/1;
+    height: 80vmin;
+    width: 80vmin;
     /* border: 2px black solid; */
     /*  grid-row: auto; */
     /* flex-basis: 50%;
@@ -124,68 +133,74 @@
     height:150px;
   }
 }
-/* @media screen and (max-width: 1800px) {
-  .game-arena-grid {
-    width: 100%;
-    grid-template-columns: 1fr 50vh;
-    grid-template-areas:
-      "LO BB"
-      "YO BB"
-      "OP BB"
-      "AC BB"
-      "CH BB"
-      "HE BB";
-    grid-template-rows: 1fr 3fr 3fr 2fr 2fr 0px;
-  }
-  .grid-item-he {
-    display: none;
-  }
+
+
+@media screen and (max-width: 1340px) {
+
+  .goboard {
+
+    height: 90vmin;
+    width: 90vmin;
+
 }
 
+.arena-grid-container {
 
+  width: 90vmin;
 
-.arena-flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  align-items: stretch;
-  width: 100%;
-  height: 100%;
+  grid-template-rows: 90px 90vmin 90px 251px;
+ /*  max-width: 95vw; */
+}
 }
 
-.control-column {
-  flex-basis: 25%;
-  width: 400px;
-  min-width: 340px;
-  min-width: 340px;
-  background-color: aquamarine;
-} */
-/* 
-@media screen and (max-width: 900px) {
-    .arena-flex-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: end;
-        align-items: stretch;
-        width: 100%;
-        height: 100%;
-    }
-    .go-board{
-        width: 75%;
-    background-color: bisque;
-    aspect-ratio: 5/5;
-    flex-basis: 50%;
-    flex-grow: 1;
-    flex-shrink:1;
-    max-width: 95vh;
-    max-height: 95vh;
-    }
-    .control-column {
-        flex-basis: 25%;
-        width:400px;
-        min-width:340px;
-        min-width: 340px;
-        background-color: aquamarine;
-    }
-    
-} */
+@media screen and (max-width: 1000px) {
+
+  .goboard {
+
+    height: 100vmin;
+    width: 100vmin;
+
+}
+
+.arena-grid-container {
+
+  width: 100vmin;
+
+  grid-template-rows: 90px 100vmin 90px 251px;
+ /*  max-width: 95vw; */
+}
+}
+@media screen and (max-height: 850px) {
+
+  .goboard {
+
+    height: 75vmin;
+    width: 75vmin;
+
+}
+
+.arena-grid-container {
+
+  width: 75vmin;
+
+  grid-template-rows: 90px 75vmin 90px 251px;
+ /*  max-width: 95vw; */
+}
+}
+@media screen and (max-height: 800px) {
+
+  .goboard {
+
+    height: 70vmin;
+    width: 70vmin;
+
+}
+
+.arena-grid-container {
+
+  width: 70vmin;
+
+  grid-template-rows: 90px 70vmin 90px 251px;
+ /*  max-width: 95vw; */
+}
+}
